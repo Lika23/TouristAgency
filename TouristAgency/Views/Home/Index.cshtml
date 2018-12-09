@@ -33,19 +33,24 @@
                     <div class="inner">
                         <!-- 2 Columns -->
                         <div class="flex flex-2">
-                            <div class="col col1">
-                                <div class="image round fit">
-                                    <a href="/Home/CountryPage/@c.Id" class="link">
-                                        <img src="~/images/@c.Url" />
-                                    </a>
+                            @foreach (var u in c.Pictures)
+                            {
+                                <div class="col col1">
+                                    <div class="image round fit">
+                                        <a href="/Home/CountryPage/@c.Id" class="link">
+
+                                            <img src="~/images/@u.Url" />
+                                            
+                                        </a>
+                                    </div>
+                                </div>
+                            }
+                                <div class="col col2">
+                                    <h3>@c.Name</h3>
+                                    <p>@c.Description</p>
+                                    <a href="/Home/CountryPage/@c.Id" class="button">Подробнее</a>
                                 </div>
                             </div>
-                            <div class="col col2">
-                                <h3>@c.Name</h3>
-                                <p>@c.Description</p>
-                                <a href="/Home/CountryPage/@c.Id" class="button">Подробнее</a>
-                            </div>
-                        </div>
                     </div>
                 </section>
 

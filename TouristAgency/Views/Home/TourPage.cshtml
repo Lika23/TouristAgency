@@ -10,6 +10,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="~/Content/main.css" rel="stylesheet" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+
+    <script src="~/Scripts/slideshow.js"></script>
 </head>
 <body class="subpage">
     <!-- Main -->
@@ -21,25 +24,43 @@
                     <h4>@Model.City, @Model.Country.Name</h4>
                     <h1>Тур в отель @Model.Hotel</h1>
                 </header>
-                <div class="flex flex-2">
-                    <div class="6u 12u$(small)">
+                <div class="align-center">
 
-                        <div class="image fit">
 
-                            <img src="~/images/@Model.Url" />
+                    @*@foreach (var p in Model.Pictures)
+        {
+        <div class="image fit">
 
+            <img src="~/images/@i.Url" />
+
+        </div>
+        }*@
+                        <div id="content">
+                            <ul class="infoPanel">
+                                @foreach (var p in Model.Pictures)
+                                {
+                                    <li>
+                                        <a href="#url" class="infoLink">
+                                            <img alt="" src="~/images/@p.Url" style="opacity: 0.8;">
+                                        </a>
+                                        <div style="display: none;"> <img alt="" src="~/images/@p.Url"> </div>
+                                    </li>
+
+                                }
+                            </ul>
                         </div>
-                    </div>
 
-                    <div class="6u 12u$(small)">
 
-                        <h3>Дата вылета: @Html.DisplayFor(modelitem => modelitem.StartDate)</h3>
-                        <h3>Количество ночей: @Model.Night</h3>
-                        <h3>Стоимость за 10 ночей: @Model.Price $</h3>
-                    </div>
                 </div>
+                
+                <div class="6u 12u$(small)">
 
+                    <h3>Дата вылета: @Html.DisplayFor(modelitem => modelitem.StartDate)</h3>
+                    <h3>Количество ночей: @Model.Night</h3>
+                    <h3>Стоимость за 10 ночей: @Model.Price $</h3>
+                </div>
             </div>
+
         </section>
     </div>
 

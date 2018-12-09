@@ -10,7 +10,7 @@ namespace TouristAgency.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public List<Tour> Tours { get; set; }
-        public string Url { get; set; }
+        public List<Picture> Pictures { get; set; }
         public string Description { get; set; }
         public string Climate { get; set; }
         public string Kitchen { get; set; }
@@ -19,6 +19,7 @@ namespace TouristAgency.Models
         public Country()
         {
             Tours = new List<Tour>();
+            Pictures = new List<Picture>();
         }
     }
     public class AllCounties

@@ -16,7 +16,7 @@ namespace TouristAgency.Controllers
         }
         public ActionResult Index()
         {
-            IEnumerable<Country> countries = db.Countries.ToList();
+            IEnumerable<Country> countries = db.Countries.Include("Pictures").ToList();
             CountryListViewModel countriesList = new CountryListViewModel
             {
                 Countries = countries.ToList()
@@ -42,8 +42,11 @@ namespace TouristAgency.Controllers
                 return HttpNotFound();
             }
 
-            
-            Tour tour = db.Tours.Include("Country").FirstOrDefault(t => t.Id == id);
+
+            Tour tour = db.Tours
+                .Include("Country")
+                .Include("Pictures")
+                .FirstOrDefault(t => t.Id == id);
             return View(tour);
         }
         [HttpGet]
@@ -53,8 +56,13 @@ namespace TouristAgency.Controllers
             {
                 return HttpNotFound();
             }
-            //Country country = db.Countries.SingleOrDefault(x => x.Id == id);
-            Country country = db.Countries.Include("Tours").FirstOrDefault(x=>x.Id==id);
+
+            Country country = db.Countries
+                .Include("Pictures")
+                .Include("Tours")
+                .Include("Tours.Pictures")
+
+                .FirstOrDefault(x => x.Id == id);
             return View(country);
         }
         public ActionResult Montenegro()

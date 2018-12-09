@@ -1,4 +1,9 @@
 ﻿@model IEnumerable<TouristAgency.Models.MenuItem>
+    <html>
+<head>
+    <link href="~/Content/main.css" rel="stylesheet" />
+</head>
+<body>
 <header id="header">
     <a href="#menu">Меню</a>
     <div class="logo"><a href="@Url.Action("Index")" class="link" style="color:white">Главная</a></div>
@@ -17,3 +22,5 @@
         }
     </ul>
 </nav>
+    </body>
+</html>

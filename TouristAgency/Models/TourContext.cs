@@ -11,5 +11,6 @@ namespace TouristAgency.Models
         public TourContext() : base("TouristAgency") { }
         public DbSet<Tour> Tours { get; set; }
         public DbSet<Country> Countries { get; set; }
+        public DbSet<Picture> Pictures { get; set; }
     }
 }

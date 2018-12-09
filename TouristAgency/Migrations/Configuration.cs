@@ -9,7 +9,7 @@ namespace TouristAgency.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(TouristAgency.Models.TourContext context)

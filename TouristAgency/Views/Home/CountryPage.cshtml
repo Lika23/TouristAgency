@@ -36,9 +36,12 @@
                         <p>@Model.Population</p>
                     </div>
                     <div class="col col1 first">
+                        @foreach (var i in Model.Pictures)
+                        {
                         <div class="image round fit">
-                            <img src="~/images/M.jpg" />
+                            <img src="~/images/@i.Url" />
                         </div>
+                            }
                     </div>
                 </div>
 
@@ -54,22 +57,30 @@
                     </header>
 
                     <div class="flex flex-3">
-                        @foreach (Tour c in Model.Tours)
+                        @foreach (Tour t in Model.Tours)
                         {
+
                         <div class="col align-center">
+
                             <div class="image round fit">
-                                <a href="/Home/TourPage/@c.Id">
-                                    <img src="~/images/@c.Url" />
-                                </a>
-                            </div>
-                            <a href="/Home/TourPage/@c.Id">
-                                <h3>@c.City</h3>
-                                </a>
-                                <p>@c.Hotel</p>
+                                
+                                    <a href="/Home/TourPage/@t.Id">
+
+                                        <img src="~/images/@t.Pictures[0].Url" />
+                                        
+                                    </a>
+                                </div>
+                            
+                            <a href="/Home/TourPage/@t.Id">
+                                <h3>@t.City</h3>
+                            </a>
+                            <p>@t.Hotel</p>
                         </div>
+                            
                         }
                         </div>
-                    
+                            
+
                     </div>
             </section>
        

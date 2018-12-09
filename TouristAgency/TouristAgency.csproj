@@ -205,6 +205,10 @@
     <Compile Include="Migrations\201812052116133_tours.Designer.cs">
       <DependentUpon>201812052116133_tours.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812082341159_dropUrl.cs" />
+    <Compile Include="Migrations\201812082341159_dropUrl.Designer.cs">
+      <DependentUpon>201812082341159_dropUrl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CountriesPageViewModel.cs" />
@@ -213,6 +217,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MenuItem.cs" />
+    <Compile Include="Models\Picture.cs" />
     <Compile Include="Models\Tour.cs" />
     <Compile Include="Models\TourContext.cs" />
     <Compile Include="Models\TourListViewModel.cs" />
@@ -284,6 +289,7 @@
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\skel.min.js" />
+    <Content Include="Scripts\slideshow.js" />
     <Content Include="Scripts\util.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -319,7 +325,6 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\elements.cshtml" />
-    <Content Include="Views\Home\Croatia.cshtml" />
     <Content Include="Views\Home\TourPage.cshtml" />
     <Content Include="Views\Home\CountryPage.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
@@ -344,6 +349,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201812052116133_tours.resx">
       <DependentUpon>201812052116133_tours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812082341159_dropUrl.resx">
+      <DependentUpon>201812082341159_dropUrl.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
