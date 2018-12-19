@@ -1,0 +1,35 @@
+﻿@model TouristAgency.Models.IndexViewModel
+
+
+<br />
+
+<p class="text-success">@ViewBag.StatusMessage</p>
+<div style="margin:40px">
+    <h4 style="text-align:center">Страница администратора</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Пароль:</dt>
+        <dd>
+            [
+            @if (Model.HasPassword)
+            {
+                @Html.ActionLink("Изменить пароль", "ChangePassword")
+            }
+            else
+            {
+                @Html.ActionLink("Create", "SetPassword")
+            }
+            ]
+        </dd>
+        <dt>Создание тура:</dt>
+        <dd>
+            [<a href="/Home/Create" class="link">Добавить тур</a>]
+</dd>
+    </dl>
+</div>
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/jquery.scrollex.min.js"></script>
+    <script src="~/Scripts/jquery.scrolly.min.js"></script>
+    <script src="~/Scripts/util.js"></script>
+    <script src="~/Scripts/skel.min.js"></script>
+    <script src="~/Scripts/main.js"></script>

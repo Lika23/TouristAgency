@@ -1,0 +1,98 @@
+﻿@using TouristAgency.Models
+
+@model Country
+<!DOCTYPE HTML>
+<!--
+    Urban by TEMPLATED
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+<head>
+    <title>Adriatic</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="~/Content/main.css" rel="stylesheet" />
+</head>
+<body class="subpage">
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- Section -->
+        <section class="wrapper">
+            <div class="inner">
+                <header class="align-center">
+                    <h1>@Model.Name</h1>
+                </header>
+                <div class="flex flex-2">
+                    <div class="col col2">
+                        <h3>Климат</h3>
+                        <p>@Model.Climate</p>
+                        <h3>Кухня</h3>
+                        <p>@Model.Kitchen</p>
+                        <h3>География</h3>
+                        <p>@Model.Geography</p>
+                        <h3>Население</h3>
+                        <p>@Model.Population</p>
+                    </div>
+                    <div class="col col1 first">
+                        <div class="image round fit">
+                            <img src="~/images/M.jpg" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section -->
+            <section class="wrapper style1">
+                <div class="inner">
+                    <header class="align-center">
+                        <h2>Туры</h2>
+                        <p>У нас есть туры в эти замечательные города, которые вы не отличите от рая.</p>
+                    </header>
+
+                    <div class="flex flex-3">
+                        @foreach (Tour c in Model.Tours)
+                        {
+                        <div class="col align-center">
+                            <div class="image round fit">
+                                <a href="/Home/TourPage/@c.Id">
+                                    <img src="~/images/@c.Url" />
+                                </a>
+                            </div>
+                            <a href="/Home/TourPage/@c.Id">
+                                <h3>@c.City</h3>
+                                </a>
+                                <p>@c.Hotel</p>
+                        </div>
+                        }
+                        </div>
+                    
+                    </div>
+            </section>
+       
+    </div>
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="copyright">
+            <ul class="icons">
+                <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon fa-snapchat"><span class="label">Snapchat</span></a></li>
+            </ul>
+            <p>&copy; Untitled. All rights reserved. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/jquery.scrollex.min.js"></script>
+    <script src="~/Scripts/main.js"></script>
+    <script src="~/Scripts/skel.min.js"></script>
+    <script src="~/Scripts/util.js"></script>
+    <script src="~/Scripts/jquery.scrolly.min.js"></script>
+</body>
+</html>

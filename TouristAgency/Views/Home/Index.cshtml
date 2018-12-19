@@ -1,0 +1,142 @@
+﻿@model TouristAgency.Models.CountryListViewModel
+<!DOCTYPE HTML>
+<!--
+    Urban by TEMPLATED
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+<head>
+
+    <title>Adriatic</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="~/Content/main.css" />
+</head>
+<body>
+
+    <!-- Banner -->
+    <section id="banner">
+        <div class="inner">
+            <header>
+                <h1>Adriatic</h1>
+                <p>Турагенство "Adriatic" предлагает вашему вниманию туры в страны, которые граничат с Адриатическим морем. Самые лучшие туры по самым привлекательным ценам.</p>
+            </header>
+            <a href="#main" class="button big scrolly">Подробнее</a>
+        </div>
+    </section>
+
+    <!-- Main -->
+    <div id="main">
+            @foreach (var c in Model.Countries)
+            {
+                <section class="wrapper style1">
+                    <div class="inner">
+                        <!-- 2 Columns -->
+                        <div class="flex flex-2">
+                            <div class="col col1">
+                                <div class="image round fit">
+                                    <a href="/Home/CountryPage/@c.Id" class="link">
+                                        <img src="~/images/@c.Url" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col col2">
+                                <h3>@c.Name</h3>
+                                <p>@c.Description</p>
+                                <a href="/Home/CountryPage/@c.Id" class="button">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            }
+
+
+            @*<!-- Section -->
+            <section class="wrapper style2">
+                <div class="inner">
+                    <div class="flex flex-2">
+                        <div class="col col2">
+                            <h3>Албания</h3>
+                            <p>Государство в западной части Балканского полуострова.</p>
+                            <p>Столица — Тирана. Государственный язык — албанский.</p>
+                            <a href="@Url.Action("Albania")" class="button">Подробнее</a>
+                        </div>
+                        <div class="col col1 first">
+                            <div class="image round fit">
+                                <div class="image round fit">
+                                    <a href="@Url.Action("Albania")" class="link">
+                                        <img src="~/images/40_main_new.1490866657.jpg" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section -->
+            <section class="wrapper style1">
+                <div class="inner">
+                    <!-- 2 Columns -->
+                    <div class="flex flex-2">
+                        <div class="col col1">
+                            <div class="image round fit">
+                                <a href="@Url.Action("Croatia")" class="link">
+                                    <img src="~/images/39318f0f65c20c03b89d262d8253431e.jpg" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col col2">
+                            <h3>Хорватия</h3>
+                            <p>Государство на юге Центральной Европы, частично на западе Балканского полуострова.</p>
+                            <p>Столица и крупнейший город — Загреб.</p>
+                            <a href="@Url.Action("Croatia")" class="button">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="wrapper style2">
+                <div class="inner">
+                    <div class="flex flex-2">
+                        <div class="col col2">
+                            <h3>Италия</h3>
+                            <p>Государство в Южной Европе, в центре Средиземноморья.</p>
+                            <p>Занимает Апеннинский полуостров, крайний северо-запад Балканского полуострова, Паданскую равнину, южные склоны Альп, острова Сицилия, Сардиния и ряд мелких островов.</p>
+                            <a href="@Url.Action("Italy")" class="button">Подробнее</a>
+                        </div>
+                        <div class="col col1 first">
+                            <div class="image round fit">
+                                <a href="@Url.Action("Italy")" class="link">
+                                    <img src="~/images/917c334610b695a32eec3d24f0c18de1.jpg" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>*@
+            <!-- Footer -->
+
+            <footer id="footer">
+                <div class="copyright">
+                    <ul class="icons">
+                        <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                        <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                        <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                        <li><a href="#" class="icon fa-snapchat"><span class="label">Snapchat</span></a></li>
+                    </ul>
+                    <p>&copy; Untitled. All rights reserved. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.</p>
+                </div>
+            </footer>
+    </div>
+    <!-- Scripts -->
+
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/jquery.scrollex.min.js"></script>
+    <script src="~/Scripts/jquery.scrolly.min.js"></script>
+    <script src="~/Scripts/util.js"></script>
+    <script src="~/Scripts/skel.min.js"></script>
+    <script src="~/Scripts/main.js"></script>
+</body>
+</html>

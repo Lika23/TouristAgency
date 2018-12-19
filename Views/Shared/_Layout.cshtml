@@ -1,0 +1,11 @@
+﻿
+<html>
+<head>
+    <link href="~/Content/main.css" rel="stylesheet" />
+</head>
+<body>
+    @RenderSection("scripts", required: false)
+    @RenderBody()
+    @{ Html.RenderAction("SideMenu", "Home");}
+</body>
+</html>
