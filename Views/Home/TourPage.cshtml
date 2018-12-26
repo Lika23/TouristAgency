@@ -13,20 +13,7 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
     <script src="~/Scripts/slideshow.js"></script>
 </head>
-@*<header class="align-center">
 
-
-</header>
-<div class="flex flex-3">
-    <div class="col align-center">
-        @foreach (var p in Model.Pictures)
-        {
-            <div class="image round fit">
-                <img src="~/images/@p.Url" />
-            </div>
-        }
-    </div>
-</div>*@
 <body class="subpage">
     <!-- Main -->
     <div id="main">
@@ -50,11 +37,19 @@
                         <h3>Дата поездки: @Model.StartDate.ToShortDateString()</h3>
 
                         <h3>Ночей: @Model.Night</h3>
-                     
+
                         <h3>Стоимость: @Model.Price$</h3>
-                     
+
                         <h3>Питание: @Model.Nutrition</h3>
-                        
+                        <br />
+                        @using (Html.BeginForm("AddToCart", "Cart"))
+                        {
+                            <div class="pull-right">
+                                @Html.HiddenFor(x => x.Id)
+                                @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+                                <input type="submit" class="btn btn-success" value="Добавить в Избранные" />
+                            </div>
+                        }
                     </div>
 
                 </div>

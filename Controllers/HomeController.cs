@@ -1,13 +1,9 @@
-﻿using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
-using System;
+﻿
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using TouristAgency.Models;
-
 namespace TouristAgency.Controllers
 {
     public class HomeController : Controller
@@ -36,12 +32,12 @@ namespace TouristAgency.Controllers
                 list.Add(new MenuItem { Link = "/Home/CountryPage/" + c.Id, LinkName = c.Name });
 
             }
-            var item = new MenuItem { Link = "/Manage/Index", LinkName = "Админ" };
+            var item = new MenuItem { Link = "/Manage/Index", LinkName = "Администратор" };
             list.Add(item);
 
             if (User.Identity.IsAuthenticated)
             {
-                list.Add(new MenuItem { Link = "/Manage/Index", LinkName = "Админ" });
+                list.Add(new MenuItem { Link = "/Manage/Index", LinkName = "Администратор" });
                 list.Remove(item);
             }
             return PartialView("SideMenu", list);
@@ -64,7 +60,7 @@ namespace TouristAgency.Controllers
                     {
                         // получаем имя файла
                         string fileName = System.IO.Path.GetFileName(file.FileName);
-                        // сохраняем файл в папку Files в проекте
+                        // сохраняем файл в папку 
                         file.SaveAs(Server.MapPath("~/images/" + fileName));
                         Picture picture = new Picture() { Url = fileName };
                         db.Pictures.Add(picture);//хз зачем
@@ -130,10 +126,6 @@ namespace TouristAgency.Controllers
             return View();
         }
         public ActionResult Italy()
-        {
-            return View();
-        }
-        public ActionResult elements()
         {
             return View();
         }
