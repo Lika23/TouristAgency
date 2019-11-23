@@ -1,9 +1,5 @@
 ﻿@model TouristAgency.Models.Tour
 <!DOCTYPE HTML>
-<!--
-    Urban by TEMPLATED
-    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
 <html>
 <head>
     <title>Adriatic</title>
@@ -41,15 +37,18 @@
                         <h3>Стоимость: @Model.Price$</h3>
 
                         <h3>Питание: @Model.Nutrition</h3>
-                        <br />
+               
                         @using (Html.BeginForm("AddToCart", "Cart"))
                         {
-                            <div class="pull-right">
-                                @Html.HiddenFor(x => x.Id)
-                                @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
-                                <input type="submit" class="btn btn-success" value="Добавить в Избранные" />
-                            </div>
+                        <div class="pull-right">
+                            @Html.HiddenFor(x => x.Id)
+                            @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+                            <input type="submit" class="btn btn-success" value="Добавить в Избранные" /><h2></h2>
+                            <a href="/BookTourModels/Create/@Model.Id">Забронировать тур</a>
+                        </div>
                         }
+                        <br />
+
                     </div>
 
                 </div>

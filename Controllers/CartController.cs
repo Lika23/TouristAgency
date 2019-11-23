@@ -1,3 +1,4 @@
+
 ﻿
 using System.Linq;
 using System.Web.Mvc;
@@ -9,7 +10,7 @@ namespace TouristAgency.Controllers
         private ApplicationDbContext db;
         public CartController()
         {
-            db=new ApplicationDbContext();
+            db = new ApplicationDbContext();
         }
 
         public RedirectToRouteResult AddToCart(int id, string returnUrl)
@@ -55,4 +56,5 @@ namespace TouristAgency.Controllers
             });
         }
     }
-}
+}﻿
+

@@ -27,6 +27,7 @@ namespace TouristAgency.Models
         public DbSet<Tour> Tours { get; set; }
         public DbSet<Country> Countries { get; set; }
         public DbSet<Picture> Pictures { get; set; }
+        public DbSet<BookedTour> BookedTours { get; set; }
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

@@ -1,10 +1,12 @@
 ﻿@model TouristAgency.Models.CartIndexViewModel
+<br />
+<h2>
 
-<h2>Ваша корзина</h2>
-<table class="table">
+</h2>
+<table class="table" style="margin:40px">
     <thead>
         <tr>
-            <th>Кол-во</th>
+            <th>Кол-во человек</th>
             <th>Тур</th>
             <th class="text-right">Цена</th>
             <th class="text-right">Общая цена</th>
@@ -32,7 +34,9 @@
         </tr>
     </tfoot>
 </table>
-
-<div class="text-center">
-    <a class="btn btn-primary" href="@Model.ReturnUrl">Продолжить покупки</a>
-</div>
+<script src="~/Scripts/jquery.min.js"></script>
+<script src="~/Scripts/jquery.scrollex.min.js"></script>
+<script src="~/Scripts/main.js"></script>
+<script src="~/Scripts/skel.min.js"></script>
+<script src="~/Scripts/util.js"></script>
+<script src="~/Scripts/jquery.scrolly.min.js"></script>

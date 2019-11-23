@@ -195,6 +195,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BookTourModelsController.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -239,9 +240,30 @@
     <Compile Include="Migrations\201812202135535_pic.Designer.cs">
       <DependentUpon>201812202135535_pic.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812261418181_New.cs" />
+    <Compile Include="Migrations\201812261418181_New.Designer.cs">
+      <DependentUpon>201812261418181_New.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812261423399_m.cs" />
+    <Compile Include="Migrations\201812261423399_m.Designer.cs">
+      <DependentUpon>201812261423399_m.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812261429444_d.cs" />
+    <Compile Include="Migrations\201812261429444_d.Designer.cs">
+      <DependentUpon>201812261429444_d.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812262004583_d1.cs" />
+    <Compile Include="Migrations\201812262004583_d1.Designer.cs">
+      <DependentUpon>201812262004583_d1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812262347376_mo.cs" />
+    <Compile Include="Migrations\201812262347376_mo.Designer.cs">
+      <DependentUpon>201812262347376_mo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AppDbInitializer.cs" />
+    <Compile Include="Models\BookedTour.cs" />
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\CartIndexViewModel.cs" />
     <Compile Include="Models\CountriesPageViewModel.cs" />
@@ -299,6 +321,7 @@
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="ClassDiagram1.cd" />
+    <Content Include="ClassDiagram2.cd" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -356,12 +379,12 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\SideMenu.cshtml" />
     <Content Include="Views\Home\Create.cshtml" />
-    <Content Include="Views\Tours1\Create.cshtml" />
-    <Content Include="Views\Tours1\Delete.cshtml" />
-    <Content Include="Views\Tours1\Details.cshtml" />
-    <Content Include="Views\Tours1\Edit.cshtml" />
-    <Content Include="Views\Tours1\Index.cshtml" />
     <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\BookTourModels\Create.cshtml" />
+    <Content Include="Views\BookTourModels\Delete.cshtml" />
+    <Content Include="Views\BookTourModels\Details.cshtml" />
+    <Content Include="Views\BookTourModels\Edit.cshtml" />
+    <Content Include="Views\BookTourModels\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -406,6 +429,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812202135535_pic.resx">
       <DependentUpon>201812202135535_pic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812261418181_New.resx">
+      <DependentUpon>201812261418181_New.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812261423399_m.resx">
+      <DependentUpon>201812261423399_m.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812261429444_d.resx">
+      <DependentUpon>201812261429444_d.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812262004583_d1.resx">
+      <DependentUpon>201812262004583_d1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812262347376_mo.resx">
+      <DependentUpon>201812262347376_mo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
